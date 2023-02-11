@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context'
 import { AiOutlineHeart } from 'react-icons/ai'
 
 const Meals = () => {
-    const { meals, loading } = useGlobalContext()
+    const { meals, loading, selectMeal } = useGlobalContext()
 
     if (loading) {
         return <section>
@@ -22,7 +22,7 @@ const Meals = () => {
             const { idMeal, strMeal: mealTitle, strMealThumb: mealImage } = singleMeal
 
             return <article key={idMeal} className="single-meal" >
-                <img src={mealImage} className="img" />
+                <img src={mealImage} className="img" onClick={() => selectMeal(idMeal)} />
                 <footer>
                     <h5>{mealTitle}</h5>
                     <button className='like-btn'><AiOutlineHeart /> </button>
