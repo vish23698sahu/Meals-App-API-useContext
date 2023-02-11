@@ -199,6 +199,45 @@ ul {
 
 
 /* Favourites */
+.favourites{
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 0;
+}
+.favourites-content{
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.favourites-container{
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.favourite-item{
+  text-align: center;
+}
+.favourites-img{
+  width: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+.remove-btn{
+  margin-top: 0.25rem;
+  background: transparent;
+  color: var(--white);
+  border: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: var(--transition);
+}
+.remove-btn:hover{
+  color: var(--red-dark);
+}
+
+
+
 /* Meals */
 
 .section, .section-center{
@@ -289,7 +328,7 @@ ul {
   display: flex;
 }
 .modal-img{
-  height: 30rem;
+  height: 25rem;
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
 }
@@ -311,8 +350,8 @@ ul {
 }
 .close-btn{
   position: fixed;
-  right: 360px;
-  top: 80px;
+  right: 25%;
+  top: 11%;
   background: var(--red-dark);
   color: var(--white);
 }
@@ -320,3 +359,11 @@ ul {
   background: var(--red-light);
   color: var(--black);
 }
+@media screen and (max-width:1000px) {
+  .close-btn{
+    position: fixed;
+    right: 14%;
+    top: 12%;
+  }
+}
+

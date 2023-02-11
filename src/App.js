@@ -6,12 +6,12 @@ import Modal from './components/Modal';
 import Search from './components/Search';
 
 function App() {
-  const { showModal } = useGlobalContext();
+  const { showModal, favourites } = useGlobalContext();
 
   return (
     <div className="App">
       <Search />
-      {/* <Favourites /> */}
+      {favourites.length > 0 && <Favourites />}
       <Meals />
       {showModal && <Modal />}
     </div>
